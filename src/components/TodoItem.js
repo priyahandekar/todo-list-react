@@ -1,9 +1,11 @@
 import React from "react";
 
-const TodoItem = ({ name, id }) => {
+const TodoItem = ({ item }) => {
+	const { name } = item;
+	console.log(item, "name");
 	return (
 		<div>
-			<div>buy house</div>
+			<div>{name}</div>
 			<div>
 				<button>EDIT</button>
 				<button>DELETE</button>

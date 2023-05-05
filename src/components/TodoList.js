@@ -1,10 +1,12 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
 	return (
 		<div>
-			<TodoItem />
+			{todos.map((item) => (
+				<TodoItem key={item.id} item={item} />
+			))}
 		</div>
 	);
 };
