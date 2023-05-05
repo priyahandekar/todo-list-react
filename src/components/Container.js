@@ -9,7 +9,7 @@ const Container = () => {
 	};
 	console.log(todos, "todos");
 	return (
-		<div>
+		<div className="flex flex-col">
 			<Header addTodos={addTodos} />
 			<TodoList todos={todos} />
 		</div>

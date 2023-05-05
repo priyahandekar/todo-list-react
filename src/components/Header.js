@@ -21,13 +21,19 @@ const Header = ({ addTodos }) => {
 
 	const optimizedInputHandling = debounce(handleInput, 300);
 	return (
-		<div>
+		<div className="">
 			<input
+				className="m-2 p-2 rounded-lg"
 				type="text"
 				onChange={(e) => optimizedInputHandling(e)}
 				placeholder="add todos here"
 			></input>
-			<button onClick={() => addTodos(todoItem)}>ADD</button>
+			<button
+				className="m-1 p-2 rounded-lg bg-black text-white text-lg"
+				onClick={() => addTodos(todoItem)}
+			>
+				ADD
+			</button>
 		</div>
 	);
 };
