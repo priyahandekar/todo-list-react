@@ -7,11 +7,16 @@ const Container = () => {
 	const addTodos = (name) => {
 		setTodos([...todos, { id: "1", name }]);
 	};
-	console.log(todos, "todos");
+
+	const deleteTodo = (id) => {
+		const todoIdx = todos.findIndex((item) => item.id === id);
+		todos.splice(todoIdx, 1);
+		setTodos([...todos]);
+	};
 	return (
 		<div className="flex flex-col">
 			<Header addTodos={addTodos} />
-			<TodoList todos={todos} />
+			<TodoList todos={todos} deleteTodo={deleteTodo} />
 		</div>
 	);
 };
