@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
+import TodoContext from "../context/todoContext";
 
-const Header = ({ addTodos }) => {
+const Header = () => {
 	const [todoItem, setTodoItem] = useState("");
-
+	const { todos, setTodos } = useContext(TodoContext);
+	const addTodos = (name) => {
+		setTodos([...todos, { id: "1", name }]);
+	};
 	const debounce = (fn, delay) => {
 		let timer;
 		return function () {

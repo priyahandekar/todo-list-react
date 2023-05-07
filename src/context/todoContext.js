@@ -1,3 +1,6 @@
 import { createContext } from "react";
 
-createContext;
+const TodoContext = createContext();
+
+TodoContext.displayName = "TodoContext";
+export default TodoContext;
